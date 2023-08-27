@@ -1,2 +1,3 @@
-# tf-simple-demo
-Just a simple Terraform demo for use in presentations.
+# Simple Terraform demonstration
+
+Simple Terraform project for demonstration purposes.
