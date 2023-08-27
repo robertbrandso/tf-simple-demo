@@ -51,7 +51,7 @@ resource "azurerm_dns_cname_record" "example_a" {
 
 # Sleep after creating the DNS record
 resource "time_sleep" "dns" {
-  depends_on = [azurerm_dns_cname_record.example_a]
+  depends_on      = [azurerm_dns_cname_record.example_a]
   create_duration = "10s"
 }
 
@@ -73,7 +73,7 @@ resource "azurerm_static_site_custom_domain" "example_a" {
 resource "azurerm_static_site" "example_b" {
   count = 3
 
-  name                = "stapp-example-b-${count.index+1}-lab"
+  name                = "stapp-example-b-${count.index + 1}-lab"
   location            = var.location
   resource_group_name = azurerm_resource_group.main.name
 }
